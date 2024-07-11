@@ -516,7 +516,7 @@ textarea {
   padding: 5px 10px 0;
 }
 footer {
-  background: #337053;
+  background: #7a8d92;
   padding: 10px 0;
   margin-top: 0;
 }
@@ -788,11 +788,18 @@ section.Property-details .why-hart .row {
 div#sticky-btn {
   margin: 0;
   display: none;
-  text-align: right;
+  transform: translateY(100%);
+  text-align: center;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  bottom: 0;
 }
 div#sticky-btn a {
   display: inline-block;
   color: #fff;
+  width: 100%;
+  padding: 20px 0;
 }
 div#downloadBrochure .modal-dialog {
   max-width: 600px;
@@ -884,7 +891,7 @@ div#downloadBrochure .banner-form {
   align-items: center;
   text-align: center;
   min-height: 72px;
-  background-color: #337053;
+  background-color: #7a8d92;
   color: #fff;
 }
 .additional-spec h4 span {
@@ -998,9 +1005,9 @@ section#floorplan {
   margin: 50px 0 30px;
 }
 .banner-content h1 span {
-  background-color: #cdab6e;
+  background-color: #7a8d92;
   padding: 0 5px;
-  font-size: 30px;
+  font-size: 22px;
 }
 .tab-content img {
   margin: 0 auto;

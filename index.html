@@ -27,6 +27,9 @@
 </head>
 
 <body>
+	<div id="sticky-btn" class="btn-style-1">
+		<a href="#" class="register_btn">REGISTER YOUR INTEREST</a>
+	</div>
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM3GTH9J" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
@@ -39,9 +42,7 @@
 						<img src="images/logos/logo.webp" alt="sky-haven-logo">
 					</a>
 				</div>
-				<div id="sticky-btn" class="btn-style-1">
-					<a href="#" class="register_btn">REGISTER YOUR INTEREST</a>
-				</div>
+
 			</div>
 		</div>
 	</header>
@@ -65,10 +66,9 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="banner-content">
-						<h1>Luxury Living Meets Outdoor Adventure
-						</h1>
-						<h1><span>Explore Life at Venera at The Valley</span></h1>
-						<h3>The Biggest 3 & 4 Bedroom Townhouses by Emaar Properties
+						<h1>Venera at The Valley Phase 2</h1>
+						<h1><span>The Biggest 3 & 4 Bedroom Townhouses by Emaar</span></h1>
+						<!-- <h3>The Biggest 3 & 4 Bedroom Townhouses by Emaar Properties -->
 						</h3>
 						<ul style="color: #ffffff;">
 							<li>• Starting Price: 995 AED / SQFT</li>
@@ -83,7 +83,7 @@
 				<div class="col-md-6">
 					<div class="banner-cf-wrapper">
 						<div class="banner-form">
-							<h5>WELCOME TO GREENWAY AT EMAAR SOUTH</h5>
+							<h5>REGISTER YOUR INTEREST</h5>
 							<a class="close" href="">x</a>
 							<div id="success"></div>
 							<form id="contactForm" name="contactForm" method="post" class="form-horizontal">
@@ -96,7 +96,7 @@
 											<input type="hidden" name="campaign" id="campaign" value="">
 											<input type="hidden" name="medium" id="medium" value="">
 											<input type="hidden" name="term" id="term" value="">
-											<input type="hidden" name="campaignId" id="campaignId" value="176">
+											<input type="hidden" name="campaignId" id="campaignId" value="179">
 											<input type="text" class="form-control" id="fname" name="fname"
 												placeholder="First Name *" maxlength="100" pattern="[a-zA-Z\s]+"
 												autocomplete="off" oninvalid="FNameInvalidMsg(this);"
@@ -557,7 +557,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3">
-					<div class="amenities">
+					<div class="amenities" style="margin: 0 auto;">
 						<div class="amenities-img">
 							<div>
 								<img src="images/icons/IC-05.webp" alt="sky-haven-icon"><i class="fa fa-play"
@@ -567,7 +567,7 @@
 						<h4>Jogging Trails</h4>
 					</div>
 				</div>
-				<!-- <div class="col-md-3">
+				<div class="col-md-3">
 					<div class="amenities">
 						<div class="amenities-img">
 							<div>
@@ -575,10 +575,10 @@
 									aria-hidden="true"></i>
 							</div>
 						</div>
-						<h4>Events Area</h4>
+						<h4>Dining Outlets</h4>
 					</div>
-				</div> -->
-				<!-- <div class="col-md-3">
+				</div>
+				<div class="col-md-3">
 					<div class="amenities">
 						<div class="amenities-img">
 							<div>
@@ -586,10 +586,10 @@
 									aria-hidden="true"></i>
 							</div>
 						</div>
-						<h4>18-Hole Championship Golf Course Nearby</h4>
+						<h4>Green Surrounding</h4>
 					</div>
-				</div> -->
-				<!-- <div class="col-md-3">
+				</div>
+				<div class="col-md-3">
 					<div class="amenities">
 						<div class="amenities-img">
 							<div>
@@ -597,9 +597,9 @@
 									aria-hidden="true"></i>
 							</div>
 						</div>
-						<h4>Access to Top-Tier Schools</h4>
+						<h4>Gymnasium</h4>
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	</section>
@@ -664,8 +664,7 @@
 				</div>
 				<div class="col-md-6 text-center">
 					<div class="btn-style-1 btn-download btn_abt" style=" text-align: center;">
-						<a href="#" target="_blank" class="brochure-btn about-btt" rel="noopener">DOWNLOAD FLOOR
-							PLANS</a>
+						<a href="#" target="_blank" class="brochure-btn about-btt" rel="noopener">GET PAYMENT PLAN</a>
 					</div>
 				</div>
 			</div>
@@ -787,8 +786,19 @@
 				});
 				count++;
 			});
+			// $(window).scroll(function () {
+			// 	if ($(this).scrollTop() > 100) {
+			// 		$('#sticky-btn').fadeIn();
+			// 	} else {
+			// 		$('#sticky-btn').fadeOut();
+			// 	}
+			// });
 			$(window).scroll(function () {
-				if ($(this).scrollTop() > 100) {
+				var scrollTop = $(this).scrollTop();
+				var windowHeight = $(window).height();
+				var documentHeight = $(document).height();
+
+				if (scrollTop > 100 && scrollTop + windowHeight < documentHeight - 100) {
 					$('#sticky-btn').fadeIn();
 				} else {
 					$('#sticky-btn').fadeOut();
