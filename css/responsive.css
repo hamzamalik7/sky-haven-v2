@@ -57,6 +57,12 @@
     display: block;
     transform: translateY(0);
   }
+  div#sticky-btn-nav {
+    text-align: right;
+    position: absolute;
+    top: -40px;
+    right: 10px;
+  }
   .btn-style-1 a {
     padding: 5px 15px;
   }

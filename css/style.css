@@ -801,6 +801,15 @@ div#sticky-btn a {
   width: 100%;
   padding: 20px 0;
 }
+div#sticky-btn-nav {
+  margin: 0;
+  display: none;
+  text-align: right;
+}
+div#sticky-btn-nav a {
+  display: inline-block;
+  color: #fff;
+}
 div#downloadBrochure .modal-dialog {
   max-width: 600px;
 }

@@ -42,7 +42,9 @@
 						<img src="images/logos/logo.webp" alt="sky-haven-logo">
 					</a>
 				</div>
-
+				<div id="sticky-btn-nav" class="btn-style-1">
+					<a href="#" class="register_btn">REGISTER YOUR INTEREST</a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -816,6 +818,27 @@
 					});
 				}
 			});
+			// ---------
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$('#sticky-btn-nav').fadeIn();
+				} else {
+					$('#sticky-btn-nav').fadeOut();
+				}
+			});
+			// Add smooth scrolling to all links
+			$("#sticky-btn-nav a").on('click', function (event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function () {
+						window.location.hash = hash;
+					});
+				}
+			});
+			// ---------
 			$(".register_btn").on('click', function (event) {
 				event.preventDefault();
 				$('.banner-cf-wrapper').addClass('popup');
